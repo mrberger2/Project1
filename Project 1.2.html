@@ -2,107 +2,45 @@
 <html>
 <head>
     <title>Good Business Inc.</title>
+    <link rel="stylesheet" href="project1.2..css">
+    <script src="project1.2.js"></script>
 
-    <style>
-
-        body {
-            margin: 0;
-        }
-        .header {
-            background-color: whitesmoke;
-            padding: 20px;
-            text-align: center;
-        }
-        .topnav {
-            background-color: grey;
-        }
-        .topnav a{
-            float: left;
-            display: block;
-            color: black;
-            text-align: center;
-            padding:20px 22px;
-        }
-        .topnav a:hover{
-            background-color: palegreen;
-            color: black;
-        }
-        input[type=text], select{
-            width: 10%;
-            padding: 5px 4px;
-            margin: 3px 0;
-            display: inline-block;
-            border: 1px solid black;
-            border-radius: 2px;
-            box-sizing: border-box;
-        }
-        input[type=button]{
-            width: 8%;
-            background-color: forestgreen;
-            color: black;
-            padding: 10px 18px;
-            margin: 8px 0;
-        }
-        input[type=button]:hover{
-            background-color: palegreen;
-        }
-    </style>
 </head>
 
 <body>
 
 <div class=header">
-<h1 style="color:forestgreen;margin-left: 80px; text-align: left">Good Inc.</h1>
-<h2 style="color:forestgreen;margin-left: 50px">We do good business</h2>
-<h3 style="color:forestgreen;margin-left: 25px">1000 West South Street Topeka, KS 65987</h3>
+    <h1>Good Inc.</h1>
+    <h2>We do good business</h2>
+    <h3>1000 West South Street Topeka, KS 65987</h3>
 </div>
 
-<div class="topnav">
+<nav class="topnav">
     <a href="Project 1.2.html">Home</a>
     <a href="inventory.html">Inventory</a>
     <a href="contact.html">Contact</a>
-</div>
+</nav>
+
 <div>
 <form NAME="myform" ACTION="" METHOD="GET">
     <br><br><br><br><br>
-    Enter your name:
+    Tell us who you are so we can say hello!
     <input TYPE="text" NAME="nameBox" VALUE="" align="right">
-    <input TYPE="button" NAME="button" Value="Click" onClick="printName(this.form)"><br><br><br>
-
+    <input TYPE="button" NAME="button" Value="Say Hello!" onClick="printName(this.form)"><br><br><br>
+    To add two numbers, plus all numbers in between...</br></br>
     Enter a starting number:
     <input TYPE="text" NAME="n1" ID="number1" align="right"><br>
     Enter the ending number:
     <input TYPE="text" NAME="n2" ID="number2" align="right">
-    <input TYPE="button" VALUE="Add" onclick="sumNums();"><br><br><br>
+    <input TYPE="button" VALUE="Result?" onclick="sumNums();"><br><br><br>
 
-    Enter a sentence you would like reversed.
+    Send us a message, and we'll send it backwards to you!
     <input TYPE="text" NAME="sentenceBox" VALUE="" ID="reverseString">
-    <input TYPE="button" NAME="button" Value="Click" onClick="reverseSen(this.form)"><br><br><br>
+    <input TYPE="button" NAME="button" Value="Send" onClick="reverseSen(this.form)"><br><br><br>
 
 </form>
 </div>
-<script LANGUAGE="JavaScript">
 
-    function printName (form) {
-        var nameIn = form.nameBox.value;
-        alert ("Hello " + nameIn + "!");
-    }
-    function sumNums() {
-        var num1 = parseInt(document.getElementById("number1").value);
-        var num2 = parseInt(document.getElementById("number2").value);
-        var result = (num2*(num2+num1))/2;
-        alert("The result is " + result);
-    }
-    function reverseSen () {
-        var s = document.getElementById("reverseString").value;
-        var newRev="";
-        var i;
-        for ( i = s.length - 1; i >= 0; i--){
-            newRev += s[i];
-        }
-        alert(newRev);
-    }
-</script>
 
 </body>
 </html>
